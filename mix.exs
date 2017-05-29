@@ -29,6 +29,10 @@ defmodule Birdy.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
+      {:ex_unit_notifier, "~> 0.1", only: :test, runtime: false},
+      {:credo, "~> 0.7.4", only: [:dev, :test], runtime: false}
+    ]
   end
 end
