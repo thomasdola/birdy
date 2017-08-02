@@ -1,0 +1,33 @@
+[
+  {
+    "request": {
+      "body": "originator=Ryme&body=this+is+just+a+test&recipients=00233248089578",
+      "headers": {
+        "Authorization": "AccessKey test_gshuPaZoeEG6ovbc8M79w0QyM"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://rest.messagebird.com/messages"
+    },
+    "response": {
+      "body": "{\"id\":\"03a90f35f592c0342bd9263b00338317\",\"href\":\"https://rest.messagebird.com/messages/03a90f35f592c0342bd9263b00338317\",\"direction\":\"mt\",\"type\":\"sms\",\"originator\":\"Ryme\",\"body\":\"this is just a test\",\"reference\":null,\"validity\":null,\"gateway\":2,\"typeDetails\":{},\"datacoding\":\"plain\",\"mclass\":1,\"scheduledDatetime\":null,\"createdDatetime\":\"2017-05-29T11:17:22+00:00\",\"recipients\":{\"totalCount\":1,\"totalSentCount\":1,\"totalDeliveredCount\":0,\"totalDeliveryFailedCount\":0,\"items\":[{\"recipient\":233248089578,\"status\":\"sent\",\"statusDatetime\":\"2017-05-29T11:17:22+00:00\"}]}}",
+      "headers": {
+        "Server": "nginx",
+        "Date": "Mon, 29 May 2017 11:17:22 GMT",
+        "Content-Type": "application/json; charset=UTF-8",
+        "Content-Length": "565",
+        "Connection": "keep-alive",
+        "Access-Control-Allow-Headers": "Authorization, Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE",
+        "Access-Control-Allow-Credentials": "true",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "Cache-Control": "must-revalidate, post-check=0, pre-check=0"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]

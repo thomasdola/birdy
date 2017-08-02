@@ -1,8 +1,5 @@
 defmodule BirdyTest do
+  @moduledoc false
+  
   use ExUnit.Case
-  doctest Birdy
-
-  test "the truth" do
-    assert 1 + 1 == 2
-  end
 end

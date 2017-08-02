@@ -1,4 +1,6 @@
 defmodule Birdy.Mixfile do
+  @moduledoc false
+  
   use Mix.Project
 
   def project do
@@ -7,6 +9,9 @@ defmodule Birdy.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description(),
+     package: package(),
+     source_url: "https://github.com/thomasdola/birdy",
      deps: deps()]
   end
 
@@ -32,9 +37,27 @@ defmodule Birdy.Mixfile do
     [
       {:httpoison, "~> 0.11.1"},
       {:poison, "~> 3.0"},
+      {:exvcr, "~> 0.8", only: :test, runtime: false},
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:ex_unit_notifier, "~> 0.1", only: :test, runtime: false},
-      {:credo, "~> 0.7.4", only: [:dev, :test], runtime: false}
+      {:credo, "~> 0.7.4", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
+    ]
+  end
+
+  defp description do
+    """
+    A Simple Wrapper around MessageBird API
+    """
+  end
+
+  defp package do
+    # These are the default files included in the package
+    [
+      name: :py_cryptx,
+      maintainers: ["Thomas Paul"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/thomasdola/birdy"}
     ]
   end
 end
