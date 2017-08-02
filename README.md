@@ -9,7 +9,7 @@ by adding `birdy` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:birdy, "~> 0.1.0"}]
+  [{:birdy, github: "thomasdola/birdy"}]
 end
 ```
 
