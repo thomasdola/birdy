@@ -1,11 +1,11 @@
 defmodule Birdy.Mixfile do
   @moduledoc false
-  
+
   use Mix.Project
 
   def project do
     [app: :birdy,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -35,11 +35,10 @@ defmodule Birdy.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.11.1"},
-      {:poison, "~> 3.0"},
-      {:exvcr, "~> 0.8", only: :test, runtime: false},
+      {:httpoison, "~> 1.0", override: true},
+      {:poison, "~> 3.1"},
+      {:exvcr, "~> 0.10", only: :test, runtime: false},
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
-      {:ex_unit_notifier, "~> 0.1", only: :test, runtime: false},
       {:credo, "~> 0.7.4", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
     ]
