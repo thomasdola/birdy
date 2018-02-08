@@ -35,9 +35,9 @@ defmodule Birdy.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.13"},
+      {:httpoison, "~> 1.0", override: true},
       {:poison, "~> 3.1"},
-      {:exvcr, "~> 0.8", only: :test, runtime: false},
+      {:exvcr, "~> 0.10", only: :test, runtime: false},
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:credo, "~> 0.7.4", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false}

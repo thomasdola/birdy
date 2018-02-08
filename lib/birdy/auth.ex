@@ -21,7 +21,7 @@ defmodule Birdy.Auth do
     @doc """
     Builds and returns the http authentication headers
     """
-    @spec headers() :: Keyword.t
+    @spec headers() :: [{atom, binary}]
     def headers() do
         key = access_key!()
         [Authorization: "AccessKey #{key}"]
